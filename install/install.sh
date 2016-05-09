@@ -1,6 +1,7 @@
 #!/bin/bash
 
 latest_tag=$1
+echo $latest_tag
 if [ ${latest_tag} ]; then
     tag_or_branch=$1
 else
@@ -83,7 +84,8 @@ download_file()
 {
     url=$1
     local_path=$2
-
+    echo $url
+    echo $local_path
     $sh_c "rm -f ${local_path}"
 
     http_status_code='0'
